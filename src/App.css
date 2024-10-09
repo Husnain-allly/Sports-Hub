@@ -1,0 +1,501 @@
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Ensure the dropdown menu is positioned correctly */
+}
+
+.logo {
+  height: 40px;
+}
+
+.dash-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dash-reg-btn,
+.dash-login-btn,
+.dash-logout-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.dash-reg-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.dash-reg-btn:hover {
+  background-color: #2980b9;
+}
+
+.dash-login-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.dash-login-btn:hover {
+  background-color: #ff6b81;
+}
+
+.dash-logout-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.dash-logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.user-name {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 30fr 1fr;
+  /* Three columns with auto width */
+  gap: 16px;
+  padding: 30px;
+}
+
+.grid-item {
+  background-color: #a2a1a1;
+  padding: 2px;
+  text-align: center;
+}
+
+.Vend {
+  background-color: #6b6969;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #100f0f;
+}
+
+.post {
+  background-color: #f1eeee;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #100f0f;
+}
+
+.info {
+  background-color: #f1eeee;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar {
+  max-width: 200px;
+  /* Adjust the width as needed */
+  margin-right: 20px;
+  /* Space between calendar and news section */
+}
+
+.news {
+  background-color: #f1eeee;
+  position: relative;
+  overflow: hidden;
+}
+
+.Vendorback {
+  background-color: #f1eeee;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item {
+  padding: 7px;
+  /* Equivalent to p-3 in Tailwind */
+  color: rgb(6, 6, 6);
+  /* Equivalent to text-red-800 */
+  border: 2px solid rgb(255, 255, 255);
+  /* Equivalent to border-2 border-black */
+  margin-bottom: 15px;
+  /* Equivalent to mb-2 */
+  /* Equivalent to font-bold */
+  font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+  /* Equivalent to font-serif */
+}
+
+.score {
+  background-color: #f1eeee;
+  /* Example news background */
+}
+
+.score-item {
+  padding: 7px;
+  /* Equivalent to p-3 in Tailwind */
+  color: rgb(10, 10, 10);
+  /* Equivalent to text-red-800 */
+  border: 2px solid rgb(255, 255, 255);
+  /* Equivalent to border-2 border-black */
+  margin-bottom: 15px;
+  /* Equivalent to mb-2 */
+  /* Equivalent to font-bold */
+  font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+  /* Equivalent to font-serif */
+}
+
+.video-ad {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the video fills the area without distortion */
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.banner-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  /* Adjust based on your banner's height */
+  z-index: 5;
+  /* Ensure it stays above the content */
+}
+
+.main-container {
+  background-color: #f1eeee;
+  /* Set the background color to silver */
+  padding: 20px;
+  /* Optional: Adjust padding as needed */
+}
+
+/* Number bar button styles */
+.number-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.number-btn.active {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Styles for your post container */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+/* Styles for followed posts container */
+.followed-post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f1eeee;
+}
+
+/* Ensure posts are displayed in a single row */
+.post-row,
+.followed-post-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/* Styling for post items */
+.post-item,
+.followed-post-item {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.post-image,
+.followed-post-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.vendor-container {
+  background-color: #f1eeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* Optional: Adds space between vendors */
+  padding: 10px;
+  overflow-x: auto;
+  /* Allows scrolling if vendors overflow */
+}
+
+.vendor-item {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.vendor-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.vendor-name {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.number-selection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.number-btn {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 5px;
+  /* Adds small space between buttons */
+}
+
+.number-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.calendar-icon {
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: auto;
+  /* Pushes the calendar icon to the right */
+}
+
+.number-selection-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Ensures the container takes full width */
+}
+
+.calendar-dropdown {
+  position: absolute;
+  top: 50px;
+  /* Adjust based on the position relative to the icon */
+  right: 20px;
+  /* Adjust as needed */
+  z-index: 10;
+  /* Ensure it's on top of other elements */
+}
+
+.calendar {
+  width: 300px;
+  /* Adjust calendar size */
+  height: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.number-btn.calendar-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  align-items: left;
+justify-content: left;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  background-color: #53c522;
+}
+.dropdown{
+  height: 50%;
+  width: 60%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+   
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Layout for mobile-first design */
+
+  /* Adjust the dash header */
+  .dash-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  /* Adjust logo size for small screens */
+  .logo {
+    height: 25px;
+  }
+
+  /* Button size adjustment for small screens */
+  .dash-reg-btn,
+  .dash-login-btn,
+  .dash-logout-btn {
+    font-size: 12px;
+    /* Smaller font size */
+    padding: 5px;
+    /* Smaller padding */
+  }
+
+  /* Single column grid layout for mobile */
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 15px;
+    /* Reduce padding */
+  }
+
+  /* Make sure each grid item takes full width */
+  .grid-item {
+    width: 100%;
+  }
+
+  /* Adjust the banner */
+  .banner-fixed {
+    width: 100%;
+    height: auto;
+    /* Adjust the height automatically */
+  }
+
+  .banner {
+    width: 100%;
+    height: auto;
+    /* Banner takes full width and maintains aspect ratio */
+    margin-bottom: 20px;
+    /* Adds space between banner and content */
+  }
+
+  /* Bottom banner section */
+  .banner-bottom {
+    width: 100%;
+    height: auto;
+    /* Ensures the banner is responsive */
+    margin-top: 20px;
+    /* Adds margin at the bottom */
+  }
+
+  /* Vendor container responsiveness */
+  .vendor-container {
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: visible;
+    /* Removes horizontal scrolling */
+  }
+
+  /* Ensure vendor images are displayed in full width */
+  .vendor-image {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Responsive post layout */
+  .post-container,
+  .followed-post-container {
+    gap: 10px;
+    padding: 5px;
+  }
+
+  .post-row,
+  .followed-post-row {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+  .post-item,
+  .followed-post-item {
+    width: 100%;
+  }
+
+  /* Calendar dropdown and calendar adjustments for smaller screens */
+  .calendar-dropdown {
+    top: 80px;
+    /* Adjust dropdown position */
+    left: 10px;
+    /* Align properly in mobile view */
+  }
+
+  .calendar {
+    width: 100%;
+    /* Full width for calendar */
+  }
+
+  /* Adjust news and score items for mobile */
+  .news-item,
+  .score-item {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* Number button adjustment */
+  .number-btn {
+    padding: 5px 8px;
+    margin-right: 2px;
+  }
+
+  /* Remove unnecessary horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+}
+   
+    
